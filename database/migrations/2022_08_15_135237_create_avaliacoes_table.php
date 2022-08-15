@@ -15,13 +15,14 @@ class CreateAvaliacoesTable extends Migration
     {
         Schema::create('avaliacoes', function (Blueprint $table) {
             $table->integer('id_avaliacao', true);
-            $table->string('comentario', 500)->nullable();
+            $table->string('nota', 100);
+            $table->string('comentario', 500);
+            $table->dateTime('data');
+            $table->boolean('situacao');
+            $table->boolean('tipo');
             $table->integer('id_user')->nullable()->index('id_user');
             $table->integer('id_quadra')->nullable()->index('id_quadra');
-            $table->dateTime('data')->nullable();
-            $table->string('nota', 100)->nullable();
-            $table->boolean('situacao')->nullable();
-            $table->boolean('tipo')->nullable();
+            $table->timestamps();
         });
     }
 

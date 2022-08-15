@@ -15,9 +15,10 @@ class CreateEsportesTable extends Migration
     {
         Schema::create('esportes', function (Blueprint $table) {
             $table->integer('id_esporte', true);
-            $table->string('modalidade', 100)->nullable();
-            $table->string('desc_modalidade', 100)->nullable();
-            $table->string('nr_jogadores', 100)->nullable();
+            $table->string('modalidade', 100);
+            $table->string('desc_modalidade', 100);
+            $table->string('nr_jogadores', 100);
+            $table->timestamps();
         });
     }
 

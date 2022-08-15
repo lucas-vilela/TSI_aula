@@ -14,8 +14,8 @@ class AddForeignKeysToFirebaseAgendamentosTable extends Migration
     public function up()
     {
         Schema::table('firebase_agendamentos', function (Blueprint $table) {
-            $table->foreign(['id_user'], 'firebase_agendamentos_ibfk_2')->references(['id_user'])->on('usuario');
-            $table->foreign(['id_horario'], 'firebase_agendamentos_ibfk_1')->references(['id_horario'])->on('horarios');
+            $table->foreign(['id_horario'], 'firebase_agendamentos_ibfk_2')->references(['id_horario'])->on('horarios');
+            $table->foreign(['id_user'], 'firebase_agendamentos_ibfk_1')->references(['id_user'])->on('users');
         });
     }
 

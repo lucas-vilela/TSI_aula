@@ -14,8 +14,8 @@ class AddForeignKeysToAvaliacoesTable extends Migration
     public function up()
     {
         Schema::table('avaliacoes', function (Blueprint $table) {
-            $table->foreign(['id_quadra'], 'avaliacoes_ibfk_2')->references(['id_quadra'])->on('quadra');
-            $table->foreign(['id_user'], 'avaliacoes_ibfk_1')->references(['id_user'])->on('usuario');
+            $table->foreign(['id_quadra'], 'avaliacoes_ibfk_2')->references(['id_quadra'])->on('quadras');
+            $table->foreign(['id_user'], 'avaliacoes_ibfk_1')->references(['id_user'])->on('users');
         });
     }
 

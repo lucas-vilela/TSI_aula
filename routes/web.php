@@ -4,6 +4,7 @@ use App\Http\Controllers\GinasioController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\EsporteController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -62,3 +63,22 @@ Route::post('/esporte/{id}/update', [EsporteController::class, 'update'])->name(
 Route::get('/esporte/{id}/delete', [EsporteController::class, 'remove'])->name('remove_esporte'); //pra levar pra view de confirmação de exclusão
 
 Route::post('/esporte/{id}/delete', [EsporteController::class, 'delete'])->name('delete_esporte'); //pra ir pro método delete
+
+
+// USUÁRIOS
+
+Route::get('/usuarios', [UsuarioController::class, 'index']);
+
+Route::get('/usuario/{id}', [UsuarioController::class, 'show']);
+
+Route::get('/usuario', [UsuarioController::class, 'create']); //pra levar pro form de criação
+
+Route::post('/usuario', [UsuarioController::class, 'store']); //pra ir pro método store
+
+Route::get('/usuario/{id}/edit', [UsuarioController::class, 'edit'])->name('edit_usuario'); //pra levar pro view do form edição
+
+Route::post('/usuario/{id}/update', [UsuarioController::class, 'update'])->name('update_usuario'); //pra ir pro método update
+
+Route::get('/usuario/{id}/delete', [UsuarioController::class, 'remove'])->name('remove_usuario'); //pra levar pra view de confirmação de exclusão
+
+Route::post('/usuario/{id}/delete', [UsuarioController::class, 'delete'])->name('delete_usuario'); //pra ir pro método delete

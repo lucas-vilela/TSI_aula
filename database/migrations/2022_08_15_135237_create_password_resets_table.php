@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignKeysToHorariosTable extends Migration
+class CreatePasswordResetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddForeignKeysToHorariosTable extends Migration
      */
     public function up()
     {
-        Schema::table('horarios', function (Blueprint $table) {
-            $table->foreign(['id_quadra'], 'horarios_ibfk_1')->references(['id_quadra'])->on('quadra');
+        Schema::create('password_resets', function (Blueprint $table) {
+            $table->string('email')->index();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -25,8 +27,6 @@ class AddForeignKeysToHorariosTable extends Migration
      */
     public function down()
     {
-        Schema::table('horarios', function (Blueprint $table) {
-            $table->dropForeign('horarios_ibfk_1');
-        });
+        Schema::dropIfExists('password_resets');
     }
 }

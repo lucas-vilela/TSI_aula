@@ -14,10 +14,11 @@ class CreateFirebaseAgendamentosTable extends Migration
     public function up()
     {
         Schema::create('firebase_agendamentos', function (Blueprint $table) {
-            $table->integer('id_horario')->nullable()->index('id_horario');
-            $table->boolean('status')->nullable();
-            $table->dateTime('log_agendamento')->nullable();
+            $table->boolean('status');
+            $table->dateTime('log_agendamento');
             $table->integer('id_user')->nullable()->index('id_user');
+            $table->integer('id_horario')->nullable()->index('id_horario');
+            $table->timestamps();
         });
     }
 
