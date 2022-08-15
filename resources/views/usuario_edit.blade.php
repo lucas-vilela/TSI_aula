@@ -19,7 +19,7 @@
             </tr>
             <tr>
                 <td>Permissão:</td>
-                <td><textarea name="permissao" id="" cols="30" rows="10">{{$usuario->permissao}}</textarea></td>
+                <td><input type="text" name="permissao"/ value="{{$usuario->permissao}}"></td>
             </tr>
             <tr>
                 <td>Telefone:</td>
