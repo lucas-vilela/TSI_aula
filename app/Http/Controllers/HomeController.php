@@ -6,8 +6,16 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    function index(){
-        echo "Olá controller!!";
+    private $msg;
+
+    public function __construct()
+    {
+        $this->msg = "Olá Controller";
+    }
+
+    public function index()
+    {
+        echo $this->msg;
         dd($this);
     }
 }
