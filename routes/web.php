@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\GinasioController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,6 +62,25 @@ Route::middleware('auth')->group(function(){
        ProdutoController::class,
        'remove'
    ])->name('remove');
+
+   //GINÁSIOS
+
+    Route::get('/ginasios', [GinasioController::class, 'index'])->name('ginasios');
+
+    Route::get('/ginasio/{id}', [GinasioController::class, 'show'])->name('show_ginasio');
+
+    Route::get('/ginasio', [GinasioController::class, 'create']); //pra levar pro form de criação
+
+    Route::post('/ginasio', [GinasioController::class, 'store']); //pra ir pro método store
+
+    Route::get('/ginasio/{id}/edit', [GinasioController::class, 'edit'])->name('edit_ginasio'); //pra levar pro view do form edição
+
+    Route::post('/ginasio/{id}/update', [GinasioController::class, 'update'])->name('update_ginasio'); //pra ir pro método update
+
+    Route::get('/ginasio/{id}/delete', [GinasioController::class, 'remove'])->name('remove_ginasio'); //pra levar pra view de confirmação de exclusão
+
+    Route::post('/ginasio/{id}/delete', [GinasioController::class, 'delete'])->name('delete_ginasio'); //pra ir pro método delete
+
 });
 
 
