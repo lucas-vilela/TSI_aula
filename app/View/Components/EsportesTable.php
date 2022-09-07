@@ -6,14 +6,17 @@ use Illuminate\View\Component;
 
 class EsportesTable extends Component
 {
+    public $listEsportes;
+    public $type;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($listEsportes,$type)
     {
-        //
+        $this->listEsportes = $listEsportes;
+        $this->type = $type;
     }
 
     /**

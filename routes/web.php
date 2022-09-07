@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\GinasioController;
+use App\Http\Controllers\EsporteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -81,6 +82,24 @@ Route::middleware('auth')->group(function(){
 
     Route::post('/ginasio/{id}/delete', [GinasioController::class, 'delete'])->name('delete_ginasio'); //pra ir pro método delete
 
+
+    // ESPORTES
+
+    Route::get('/esportes', [EsporteController::class, 'index'])->name('esportes');
+
+    Route::get('/esporte/{id}', [EsporteController::class, 'show']);
+
+    Route::get('/esporte', [EsporteController::class, 'create']); //pra levar pro form de criação
+
+    Route::post('/esporte', [EsporteController::class, 'store']); //pra ir pro método store
+
+    Route::get('/esporte/{id}/edit', [EsporteController::class, 'edit'])->name('edit_esporte'); //pra levar pro view do form edição
+
+    Route::post('/esporte/{id}/update', [EsporteController::class, 'update'])->name('update_esporte'); //pra ir pro método update
+
+    Route::get('/esporte/{id}/delete', [EsporteController::class, 'remove'])->name('remove_esporte'); //pra levar pra view de confirmação de exclusão
+
+    Route::post('/esporte/{id}/delete', [EsporteController::class, 'delete'])->name('delete_esporte'); //pra ir pro método delete
 });
 
 

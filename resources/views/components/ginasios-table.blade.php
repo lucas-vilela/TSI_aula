@@ -8,8 +8,6 @@
               <th><a href="#" wire:click="reverter">Id</a></th>
               <th><a href="#" wire:click="orderByName">Nome</a></th>
               <th>Telefone</th>
-              {{-- <th><a href="#" wire:click="orderByPrice">Preço</a></th>
-              <th>Importado</th> --}}
               <th colspan="2">
                   <x-button x-on:click="open = !open" class="mt-2 ml-3 bg-green-500 hover:bg-green-900 ">
                       Cadastrar
@@ -18,7 +16,6 @@
           </tr>
       </thead>
       <tbody>
-        {{-- {{ route('show_ginasio', ['id' => $ginasio->id]) }} --}}
           @foreach ($listGinasios as $ginasio)
               <tr>
                   <td><a href="/ginasio/{{$ginasio->id_ginasio}}">
