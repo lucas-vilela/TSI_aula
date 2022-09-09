@@ -5,9 +5,10 @@
   <table {{ $attributes->merge(['class' => "table table-$type"]) }}>
       <thead>
           <tr>
-              <th><a href="#" wire:click="reverter">id_quadra</a></th>
+              <th><a href="#" wire:click="reverter">Id Quadra</a></th>
               <th><a href="#" wire:click="orderByName">Nome Quadra</a></th>
-              <th>Email</th>
+              <th>Dimensões</th>
+              <th>Piso</th>
               <th colspan="2">
                   <x-button x-on:click="open = !open" class="mt-2 ml-3 bg-green-500 hover:bg-green-900 ">
                       Cadastrar
@@ -16,7 +17,9 @@
           </tr>
       </thead>
       <tbody>
+        {{-- {{dd($listQuadras)}} --}}
           @foreach ($listQuadras as $quadra)
+          {{-- {{dd($quadra)}} --}}
               <tr>
                   <td><a href="/quadra/{{$quadra->id_quadra}}">
                           {{ $quadra->id_quadra }}
@@ -66,6 +69,15 @@
                 <x-forms.quadra-update :quadra="$quadra" />
             </div>
         @endforeach
+    </div>
+
+    <div x-show="open"
+      x-bind:class="!open ? 'hidden' :
+          'overflow-y-auto overflow-x-hidden pl-60 fixed top-0 right-0 left-0 z-50 h-modal md:h-full bg-gray'">
+      <div class="flex flex-col w-1/2 pt-10 " @click.away="open = false">
+          <x-forms.quadra-create />
+          {{-- <x-forms.ginasio-update /> --}}
+      </div>
     </div>
   
 </div>

@@ -16,6 +16,7 @@
           </tr>
       </thead>
       <tbody>
+        {{-- {{dd($listGinasios)}} --}}
           @foreach ($listGinasios as $ginasio)
               <tr>
                   <td><a href="/ginasio/{{$ginasio->id_ginasio}}">

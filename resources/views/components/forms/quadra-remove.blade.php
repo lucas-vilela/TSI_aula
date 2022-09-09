@@ -18,7 +18,7 @@
                 </td>
                 <td>
                     <x-button-error @click="idmodal=null;" form="{{$quadra->id_quadra}}" type="submit"
-                        nome_quadra='confirmar' class='btn btn-danger bg-'>Deletar
+                        name='confirmar' class='btn btn-danger bg-'>Deletar
                     </x-button-error>
                 </td>
             </tr>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
 use App\Models\Quadra;
+use Livewire\Component;
 
-class Users extends Component
+class Quadras extends Component
 {
     public $quadras;
     public $orderAsc;

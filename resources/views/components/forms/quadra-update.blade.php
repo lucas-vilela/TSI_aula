@@ -2,7 +2,7 @@
     <div class="flex flex-col justify-center w-1/2 shadow dark:bg-gray-700 h-auto m-5 p-3 bg-white self-center rounded-md">
         <div x-data="{
         {{-- quadra: @js($quadra), --}}
-        nome_quadra'{{$quadra->nome->quadra}}',
+        nome_quadra:'{{$quadra->nome_quadra}}',
         dimensoes:'{{$quadra->dimensoes}}',
         piso:'{{$quadra->piso}}',
         update(id){
@@ -23,7 +23,7 @@
                     <tr>
                         <td>Dimensões</td>
                         <td>
-                            <input x-model='dimensoes'  type="tel" name="dimensoes"  value="{{$quadra->dimensoes}}">
+                            <input x-model='dimensoes'  type="text" name="dimensoes"  value="{{$quadra->dimensoes}}">
                         </td>
                     </tr>
                     <tr>

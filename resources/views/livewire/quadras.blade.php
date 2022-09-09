@@ -3,7 +3,7 @@
         <div class="col">
             @if ($quadras->count() > 0)
                 {{-- {{dd($quadras)}} --}}
-                <x-quadras-table :listquadras="$quadras" type="striped"/>
+                <x-quadras-table :listQuadras="$quadras" type="striped"/>
             @else
                 <p>Quadras não encontradas! </p>
             @endif

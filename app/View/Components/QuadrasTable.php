@@ -15,7 +15,7 @@ class QuadrasTable extends Component
      */
     public function __construct($listQuadras,$type)
     {
-        $this->listQuardas = $listQuadras;
+        $this->listQuadras = $listQuadras;
         $this->type = $type;
     }
 

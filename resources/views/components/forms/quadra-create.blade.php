@@ -1,5 +1,5 @@
 <div class=" w-fit h-auto m-2 p-3 drop-shadow-2xl bg-white self-center rounded-md pt-6">
-    <h1 class="text-xl">Cadastrar Novo Usuário</h1>
+    <h1 class="text-xl">Cadastrar Nova Quadra</h1>
     <div x-data="{
         nome_quadra:'',
         dimensoes:'',
@@ -17,17 +17,17 @@
             @csrf
             <table>
                 <tr>
-                    <td>nome_quadra:</td>
+                    <td>Nome quadra:</td>
                     <td><input x-model="nome_quadra" type="text" name="nome_quadra" /></td>
                 </tr>
                 <tr>
-                    <td>Descrição nome_quadra:</td>
+                    <td>Dimensões:</td>
                     <td>
                         <input x-model="dimensoes" type="text" name="dimensoes" >
                     </td>
                 </tr>
                 <tr>
-                    <td>Nº de jogadores:</td>
+                    <td>Piso:</td>
                     <td><input x-model="piso" type="text" name="piso" /></td>
                 </tr>
             </table>
