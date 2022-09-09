@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\GinasioController;
 use App\Http\Controllers\EsporteController;
+use App\Http\Controllers\QuadrasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -100,6 +101,12 @@ Route::middleware('auth')->group(function(){
     Route::get('/esporte/{id}/delete', [EsporteController::class, 'remove'])->name('remove_esporte'); //pra levar pra view de confirmação de exclusão
 
     Route::post('/esporte/{id}/delete', [EsporteController::class, 'delete'])->name('delete_esporte'); //pra ir pro método delete
+
+    // QUADRAS
+
+    Route::get('/quadras', [QuadrasController::class, 'index'])->name('quadras');
+
+
 });
 
 

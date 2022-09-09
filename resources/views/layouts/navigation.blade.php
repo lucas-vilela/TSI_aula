@@ -19,7 +19,10 @@
                         {{ __('Esportes') }}
                     </x-nav-link>
                     <x-nav-link :href="route('ginasios')" :active="request()->routeIs('ginasios')">
-                        {{ __('Ginasios') }}
+                        {{ __('Ginásios') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('quadras')" :active="request()->routeIs('quadras')">
+                        {{ __('Quadras') }}
                     </x-nav-link>
                 </div>
             </div>

@@ -23,7 +23,6 @@
                       </a>
                   </td>
                   <td>{{ $ginasio->nome }}</td>
-                  {{-- <td>{{ $ginasio->qtd_estoque }}</td> --}}
                   <td>{{ $ginasio->telefone }}</td>
                   {{-- <td>{{ $ginasio->importado ? 'Sim' : 'Não' }}</td> --}}
                   <td>

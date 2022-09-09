@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Esporte;
 
+
 class EsporteController extends Controller
 {
     public function __construct()
